@@ -1,0 +1,1 @@
+webpack-IE-polyfill
