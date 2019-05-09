@@ -8,7 +8,6 @@ webpack-IE-polyfill
 - SASS
 
 ## IE version
-- IE8, Win7
 - IE9, Win7
 - IE10, Win7
 - IE11, Win7
