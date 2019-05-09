@@ -1,4 +1,5 @@
 import * as React from 'react';
+import PostContainer from 'containers/PostContainer';
 import ProfileContainer from 'containers/ProfileContainer';
 import './App.scss';
 
@@ -17,6 +18,8 @@ export default class App extends React.Component<Props> {
       <div id="app">
         <div>{children}</div>
         <ProfileContainer/>
+
+        <PostContainer/>
       </div>
     )
   }
