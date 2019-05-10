@@ -2,7 +2,11 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-	entry: path.join(__dirname, '/src/') + 'index.js',
+	entry: [
+		'@babel/polyfill',
+		'whatwg-fetch',
+		path.join(__dirname, '/src/') + 'index.js'
+	],
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'bundle.js',
@@ -21,6 +25,14 @@ module.exports = {
 			test: /\.tsx?$/,
 			exclude: /(node_modules)/,
 			loader: 'ts-loader'
+		}, {
+			test: /\.scss$/,
+			exclude: /(node_modules)/,
+			use: [
+				'style-loader',
+				'css-loader',
+				'sass-loader'
+			]
 		}]
 	},
 	resolve: {
