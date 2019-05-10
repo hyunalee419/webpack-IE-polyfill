@@ -7,7 +7,7 @@ const PostContainer = () => {
 
   async function getPosts() {
     try {
-      const response = await axios.get('https://jsonplaceholder.typicode.com/todos');
+      const response = await axios.get('http://jsonplaceholder.typicode.com/todos');
       const { data } = response;
       setPosts(data);
     } catch (e) {
