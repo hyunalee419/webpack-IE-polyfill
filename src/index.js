@@ -1,9 +1,16 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import App from './App';
-// import './index.scss';
+
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import reducers from './reducers';
+
+const Store = createStore(reducers);
 
 ReactDOM.render(
-	<App>hello</App>,
+	<Provider store={Store}>
+		<App>hello</App>
+	</Provider>,
 	document.getElementById('root')
 );
