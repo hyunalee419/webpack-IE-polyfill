@@ -14,9 +14,7 @@ webpack-IE-polyfill
 - IE11, Win81
 - Edge, Win10
 
-<panel>
-in VirtualBox. [Download virtual machines](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/)
-</panel>
+> in VirtualBox. [Download virtual machines](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/)
 
 ## Async
 ### Axios
