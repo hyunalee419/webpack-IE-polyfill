@@ -15,10 +15,22 @@ const PostContainer = () => {
     }
   }
 
+  function getPostsDefault() {
+    axios.get('https://jsonplaceholder.typicode.com/todos')
+      .then((response) => {
+        const { data } = response;
+        setPosts(data);
+      })
+      .catch((e) => {
+        console.warn(e.toString());
+      });
+  }
+
   return (
     <div>
       <Posts data={posts}/>
       <button onClick={getPosts}>get posts</button>
+      <button onClick={getPostsDefault}>get posts default</button>
     </div>
   );
 };
