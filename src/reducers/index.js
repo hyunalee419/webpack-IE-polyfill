@@ -5,6 +5,7 @@ const InitialState = {
 };
 
 const Common = (state=InitialState, action) => {
+  console.log('reducers: ', action.type);
   switch (action.type) {
     case Types.IS_SPIN_FULL:
       return { ...state, isSpinFull: action.isSpinFull };
