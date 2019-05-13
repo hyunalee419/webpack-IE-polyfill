@@ -2,7 +2,7 @@ webpack-IE-polyfill
 ---
 
 ## Project Stack
-- React 16.8.6 (hook)
+- React 16.8.6 (with hook)
 - Redux
 - TypeScript
 - SASS

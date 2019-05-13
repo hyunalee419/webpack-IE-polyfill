@@ -1,21 +1,25 @@
 import * as React from 'react';
+import { connect } from 'react-redux';
 import ProfileContainer from 'containers/ProfileContainer';
 import PostContainer from 'containers/PostContainer';
+import Spinner from 'components/common/Spinner';
 import './App.scss';
 
 type Props = {
-  children: any;
+  children: React.ReactNode;
+  isSpinFull?: boolean;
 }
 
-export default class App extends React.Component<Props> {
+class App extends React.Component<Props> {
   static defaultProps = {
-    children: 'default'
-  }
+    isSpinFull: false
+  };
 
   render() {
-    const { children } = this.props;
+    const { children, isSpinFull } = this.props;
     return (
       <div id="app">
+        { isSpinFull && <Spinner/> }
         <div>{children}</div>
         <ProfileContainer/>
         <PostContainer/>
@@ -23,3 +27,9 @@ export default class App extends React.Component<Props> {
     )
   }
 }
+
+const mapStateToProps = state => ({
+  isSpinFull: state.isSpinFull
+});
+
+export default connect(mapStateToProps)(App);
